@@ -4,19 +4,22 @@
         "product": 1,
         "name": "Laptop",
         "price": 999.99,
-        "units": 5
+        "units": 5,
+        "image": "laptop.jpg"
       },
       {
         "product": 2,
         "name": "Headphones",
         "price": 79.99,
-        "units": 10
+        "units": 10,
+        "image": "Headphones.jpg"
       },
       {
         "product": 3,
         "name": "Mouse",
         "price": 19.99,
-        "units": 15
+        "units": 15,
+        "image": "Mouse.jpg"
       }
     ]
   }
