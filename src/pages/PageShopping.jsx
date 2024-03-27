@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ItemList } from '../components/shopping/ItemList'; // Assuming ItemList component is in the same directory
+import { ItemList } from '../components/shopping/ItemList'; 
 import style from '../components/shopping/Items.module.css';
 
 export function PageShopping() {

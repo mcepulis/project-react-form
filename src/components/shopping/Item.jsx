@@ -1,8 +1,7 @@
 import style from './Items.module.css';
 import PropTypes from 'prop-types';
-import image from './img/Laptop.jpg'
 
-export function Item({ item }) {
+export function Item({ item, image }) {
     return (
         <div className={style.item}>
             <div className={style.itemImage}>
@@ -10,13 +9,13 @@ export function Item({ item }) {
             </div>
             <div className={style.itemInfo}>
                 <div className={style.itemName}>
-                    <h3>{item.name}</h3>
+                    <h3>{'Name: ' + item.name}</h3>
                 </div>
                 <div className={style.itemPrice}>
-                    <h3>{item.price}</h3>
+                    <h3>{'Price: ' + item.price}</h3>
                 </div>
                 <div className={style.itemUnits}>
-                    <h3>{item.units}</h3>
+                    <h3>{'Unit: ' + item.units}</h3>
                 </div>
             </div>
         </div>
@@ -28,5 +27,6 @@ Item.propTypes = {
         name: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         units: PropTypes.number.isRequired
-    }).isRequired
+    }).isRequired,
+        image: PropTypes.string.isRequired
 };
