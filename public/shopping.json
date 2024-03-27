@@ -5,7 +5,7 @@
         "name": "Laptop",
         "price": 999.99,
         "units": 5,
-        "image": "laptop.jpg"
+        "image": "Laptop.jpg"
       },
       {
         "product": 2,
