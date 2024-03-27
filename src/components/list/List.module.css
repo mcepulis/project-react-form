@@ -3,12 +3,11 @@
     flex-direction: column;
     gap: 1rem;
     list-style: none;
-    align-items: center;
 }
 
 .vegy {
     display: flex;
-    /* max-width: 20rem; */
+    max-width: 40rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -27,13 +26,5 @@
     line-height: 1rem;
 }
 .count {
-    font-size: 2rem;
-}
-
-.sum {
-    font-size: 2rem;
-}
-
-.discount {
     font-size: 2rem;
 }

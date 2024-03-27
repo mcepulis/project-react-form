@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
 import style from './List.module.css';
+import { Link } from 'react-router-dom';
 
-export function VegyItem({ title, type, price }) {
+export function VegyItem({ data }) {
+    const { title, price, unit } = data;
     const minVegetablesAmount = 0;
     const maxVegetablesAmount = 10;
-    const minDiscount = 0;
-    const maxDiscount= 100;
     const [count, setCount] = useState(1);
-    const [count2, setCount2] = useState(0);
 
     function handleCountMinus() {
         if (count > minVegetablesAmount) {
@@ -22,38 +21,30 @@ export function VegyItem({ title, type, price }) {
         }
     }
 
-    function decreaseDiscount() {
-        if (count2 > minDiscount) {
-            setCount2(count2 - 5);
+    function wordToEnglish (word) {
+        const ltKEYenDATA= {'ą': 'a', 'č': 'c', 'ę': 'e', 'ė': 'e', 'į': 'i', 'š': 's', 'ų': 'u', 'ū': 'u', 'ž': 'z'};
+        let toEnglish = '';
+        for (let i = 0; i < word.length; i++) {
+            if (ltKEYenDATA[word[i].toLowerCase()]) {
+                toEnglish += ltKEYenDATA[word[i].toLowerCase()];
+            } else {
+                toEnglish += word[i].toLowerCase();
+            }
         }
-    }
+        toEnglish = toEnglish.replace(/[?!]/g, '');
+        return toEnglish;
+    } 
 
-    function increaseDiscount() {
-        if (count2 < maxDiscount) {
-            setCount2(count2 + 5);
-        }
-    }
-
-
-    const sum = count * price;
-    const discountSum = (price - (price * count2 / 100)) * count;
-  
 
     return (
         <li className={style.vegy}>
-            <span className={style.vegyTitle}>{title}</span>
+            <span className={style.vegyTitle}>{title} ({price}&euro;/{unit})</span>
             <div className={style.controls}>
                 <button onClick={handleCountMinus} className={style.btn}>-</button>
-                <span className={style.count}>{count + type}</span> 
+                <span className={style.count}>{count} {unit}</span>
                 <button onClick={handleCountPlus} className={style.btn}>+</button>
-                <span className={style.sum}>Sum: {sum + 'eu . '}</span> 
-                <button onClick={decreaseDiscount} className={style.btn}>-</button>
-                <span className={style.discount}>Discount: {count2 + '%' + ' --->'}</span> 
-                <button onClick={increaseDiscount} className={style.btn}>+</button>
-                <span className={style.sum}>{discountSum + 'eu'} </span> 
             </div>
+            <Link to={'/vegetables/' + wordToEnglish(title)}>Read more</Link>
         </li>
     );
 }
-
-
