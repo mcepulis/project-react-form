@@ -1,0 +1,25 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.itemInfo {
+    display: grid;
+    gap: 1rem;
+}
+
+.itemName {
+    font-size: 2rem;
+}
+
+.itemList {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+}
