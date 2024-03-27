@@ -5,7 +5,7 @@ import { StudentsNoData } from "../components/students/StudentsNoData";
 export function PageStudents() {
     const [count, setCount] = useState(0);
     const [studentData, setStudentData] = useState([]);
-    const dataURL = 'https://raw.githubusercontent.com/front-end-by-rimantas/48-grupe-react-form/master/public/students.json';
+    const dataURL = 'https://raw.githubusercontent.com/mcepulis/project-react-form/master/public/students.json';
 
     useEffect(() => {
         fetch(dataURL)

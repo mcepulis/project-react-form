@@ -1,0 +1,22 @@
+{
+    "shoppingBag": [
+      {
+        "product": 1,
+        "productName": "Laptop",
+        "price": 999.99,
+        "units": 5
+      },
+      {
+        "product": 2,
+        "productName": "Headphones",
+        "price": 79.99,
+        "units": 10
+      },
+      {
+        "product": 3,
+        "productName": "Mouse",
+        "price": 19.99,
+        "units": 15
+      }
+    ]
+  }
