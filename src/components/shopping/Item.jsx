@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import style from './Items.module.css';
-import PropTypes from 'prop-types';
+
 
 export function Item({ item, image }) {
     return (
@@ -22,11 +23,3 @@ export function Item({ item, image }) {
     );
 }
 
-Item.propTypes = {
-    item: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        units: PropTypes.number.isRequired
-    }).isRequired,
-        image: PropTypes.string.isRequired
-};

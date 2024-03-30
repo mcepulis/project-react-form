@@ -1,23 +1,25 @@
+/* eslint-disable react/prop-types */
 
-import PropTypes from 'prop-types'; 
+
 import { Item } from './Item';
 import style from './Items.module.css';
 import LaptopImage from './img/Laptop.jpg';
 import HeadphonesImage from './img/Headphones.jpg';
 import MouseImage from './img/Mouse.jpg';
 
+
 export function ItemList({ items }) {
     return (
         <ul className={style.itemList}>
             {items.map((item, index) => (
-                <Item key={index} item={item} image={getImage(item.image)} />
+                <Item key={index} item={item} image={getImageUrl(item.image)} />
             ))}
         </ul>
     );
 }
 
 
-function getImage(imageName) {
+function getImageUrl(imageName) {
     switch (imageName) {
         case 'Laptop.jpg':
             return LaptopImage;
@@ -31,12 +33,3 @@ function getImage(imageName) {
 }
 
 
-ItemList.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            price: PropTypes.number.isRequired,
-            units: PropTypes.number.isRequired
-        }).isRequired
-    ).isRequired
-};

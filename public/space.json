@@ -1,0 +1,28 @@
+{
+    "spaceObjects": [
+      {
+        "name": "Moon",
+        "type": "Natural satellite",
+        "diameter_km": 3474.8,
+        "distance_from_earth_km": 384400
+      },
+      {
+        "name": "Mars",
+        "type": "Planet",
+        "diameter_km": 6779,
+        "distance_from_earth_km": 225000000
+      },
+      {
+        "name": "International Space Station",
+        "type": "Space station",
+        "length_m": 72.8,
+        "distance_from_earth_km": 420000
+      },
+      {
+        "name": "Hubble Space Telescope",
+        "type": "Space telescope",
+        "diameter_m": 2.4,
+        "distance_from_earth_km": 547
+      }
+    ]
+  }
