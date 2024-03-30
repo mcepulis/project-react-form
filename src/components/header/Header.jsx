@@ -13,6 +13,7 @@ export function Header() {
                 <Link to='/students'>Students</Link>
                 <Link to='/shopping'>Shopping</Link>
                 <Link to='/register'>Register</Link>
+                <Link to='/space'>Space</Link>
             </nav>
         </header>
     );

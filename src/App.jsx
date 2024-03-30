@@ -9,6 +9,7 @@ import { PageShopping } from './pages/PageShopping';
 import { PageVegetablesInner } from './pages/PageVegetablesInner';
 import { PageStudents } from './pages/PageStudents';
 import { PageRegister } from './pages/PageRegister';
+import { PageSpace} from './pages/PageSpace';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/students' element={<PageStudents />} />
           <Route path='/shopping' element={<PageShopping />} />
           <Route path='/register' element={<PageRegister />} />
+          <Route path='/space' element={<PageSpace />} />
           <Route path='*' element={<PageNotFound />} />
         </Route>
         <Route Component={LayoutWithAds}>
