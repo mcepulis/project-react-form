@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    gap: 5rem;
+}
+
+.containerObj {
+    display: flex;
+    justify-content: center;
+
+}
+
+.image {
+    width: 19rem;
+    height: 10rem;
+}
+
+.type {
+    color: red;
+}
+
+.key {
+    font-size: 0.8rem;
+    color: black;;
+}
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
